@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,8 +8,11 @@ public class Player : MonoBehaviour
     [SerializeField] float playerSpeed = 10f;
     [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] Camera mainCamera;
+    [SerializeField] GameObject bulletSpawn;
+    [SerializeField] GameObject bullet;
     private Vector3 moveDirection;
     private Vector2 mousePos;
+    private bool canShoot = true;
 
     void Start()
     {
@@ -40,5 +44,30 @@ public class Player : MonoBehaviour
         {
             mousePos = context.ReadValue<Vector2>();
         }
+    }
+
+    public void Shoot(InputAction.CallbackContext context)
+    {
+        //Change to detect mouse button being held to shoot every 0.2f seconds
+        if (context.performed)
+        {
+            if (canShoot)
+            {
+                Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+                canShoot = false;
+                StartCoroutine(BulletTimer(0.2f));
+            }
+        }
+    }
+
+    public Vector2 GetMousePos()
+    {
+        return mousePos;
+    }
+
+    IEnumerator BulletTimer(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        canShoot = true;
     }
 }
