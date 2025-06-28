@@ -17,5 +17,6 @@ public class LargeAsteroid : AsteroidBase
     {
         objectManager.LargeAsteroidExplosion(gameObject.transform.position, moveDirection);
         Destroy(gameObject);
+        objectManager.CreateExplosion(transform.position);
     }
 }

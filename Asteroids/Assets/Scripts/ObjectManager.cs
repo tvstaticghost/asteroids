@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ObjectManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] GameObject asteroidSmall;
     [SerializeField] GameObject asteroidSmall2;
     [SerializeField] GameObject asteroidFragment;
+    [SerializeField] GameObject explosion;
     List<GameObject> asteroidOptions = new List<GameObject>();
 
     private void Start()
@@ -25,12 +27,17 @@ public class ObjectManager : MonoBehaviour
         int fragmentSpawnChance = Random.Range(1, 11);
         if (fragmentSpawnChance == 10)
         {
-            SpawnAsteroidFragment(impactPos);
+            SpawnAsteroidFragment(impactPos, moveDirection);
         }
         else
         {
             SpawnSmallAsteroids(impactPos, moveDirection);
         }
+    }
+
+    public void CreateExplosion(Vector3 impactPos)
+    {
+        Instantiate(explosion, impactPos, Quaternion.identity);
     }
 
     private void SpawnSmallAsteroids(Vector3 impactPos, Vector3 moveDirection)
@@ -41,14 +48,20 @@ public class ObjectManager : MonoBehaviour
         smallAsteroid.GetComponent<SmallAsteroid>().InitializeDirection(moveDirection, true);
 
         int secondChoiceIndex = Random.Range(2, 4);
-        GameObject asteroidChoice2 = asteroidOptions[asteroidChoiceIndex];
-        GameObject smallAsteroid2 = Instantiate(asteroidChoice, impactPos, Quaternion.identity);
+        GameObject asteroidChoice2 = asteroidOptions[secondChoiceIndex];
+        GameObject smallAsteroid2 = Instantiate(asteroidChoice2, impactPos, Quaternion.identity);
         smallAsteroid2.GetComponent<SmallAsteroid>().InitializeDirection(moveDirection, false);
     }
 
-    private void SpawnAsteroidFragment(Vector3 impactPos)
+    private void SpawnAsteroidFragment(Vector3 impactPos, Vector3 moveDirection)
     {
         GameObject asteroidChoice = asteroidOptions[4];
-        Instantiate(asteroidChoice, impactPos, Quaternion.identity);
+        GameObject asteroidFrag = Instantiate(asteroidChoice, impactPos, Quaternion.identity);
+        asteroidFrag.GetComponent<AsteroidFragment>().InitializeDirection(moveDirection, true);
+
+        int secondChoiceIndex = Random.Range(2, 4);
+        GameObject asteroidChoice2 = asteroidOptions[secondChoiceIndex];
+        GameObject smallAsteroid2 = Instantiate(asteroidChoice2, impactPos, Quaternion.identity);
+        smallAsteroid2.GetComponent<SmallAsteroid>().InitializeDirection(moveDirection, false);
     }
 }

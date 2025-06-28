@@ -276,9 +276,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.0074074073
+    y: 0.03065134
     width: 1
-    height: 0.9858628
+    height: 0.93805873
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -328,8 +328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 100
-  m_RefResolutionX: 3859
-  m_RefResolutionY: 2140
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
   m_CropFrame: 4
   m_GridSnapping: 1
   m_FilterMode: 0
@@ -456,6 +456,7 @@ MonoBehaviour:
   asteroidSmall: {fileID: 1629615761336083978, guid: 6a5e514f8a9868c429c4e1c398615611, type: 3}
   asteroidSmall2: {fileID: 1860452224530924968, guid: 2d04ba7ed70d1224fabde5ef6ec93c1f, type: 3}
   asteroidFragment: {fileID: 2891267932199270437, guid: 662158663f1b53740b3719062f75d5a8, type: 3}
+  explosion: {fileID: 6419646156767265209, guid: 0e273c7fe5e4b184cbfed44a4a7d2b1c, type: 3}
 --- !u!4 &712511100
 Transform:
   m_ObjectHideFlags: 0
