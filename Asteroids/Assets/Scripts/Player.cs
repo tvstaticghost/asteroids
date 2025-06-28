@@ -20,11 +20,14 @@ public class Player : MonoBehaviour
         // transform.eulerAngles = newAngle;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         rigidBody.linearVelocity = new Vector2(moveDirection.x * playerSpeed, moveDirection.y * playerSpeed);
+    }
 
-        //Calculate Mouse position and rotate Player sprite to look at the mouse
+    void Update()
+    {
+       //Calculate Mouse position and rotate Player sprite to look at the mouse
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, mainCamera.nearClipPlane));
         Vector3 rotateDirection = (worldPosition - transform.position).normalized;
         rotateDirection.z = 0;

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - BulletSpawn
+  - LargeAsteroid
+  - Bullet
+  - SmallAsteroid
+  - ObjectManager
   layers:
   - Default
   - TransparentFX
