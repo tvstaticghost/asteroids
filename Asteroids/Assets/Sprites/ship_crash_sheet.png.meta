@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 86ba1cdfbc1606246959fe615b3ebc99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2101705191497484597
+    second: ship_crash_sheet_0
+  - first:
+      213: -2346507172119559887
+    second: ship_crash_sheet_1
+  - first:
+      213: 7079590603626853067
+    second: ship_crash_sheet_2
+  - first:
+      213: -3315867995697800846
+    second: ship_crash_sheet_3
+  - first:
+      213: 6707337234747396948
+    second: ship_crash_sheet_4
+  - first:
+      213: -6951905106232389977
+    second: ship_crash_sheet_5
+  - first:
+      213: -5397021903882024206
+    second: ship_crash_sheet_6
+  - first:
+      213: -3375747461657292519
+    second: ship_crash_sheet_7
+  - first:
+      213: 5790417540625893403
+    second: ship_crash_sheet_8
+  - first:
+      213: -1141448179357510896
+    second: ship_crash_sheet_9
+  - first:
+      213: -3568144444046236290
+    second: ship_crash_sheet_10
+  - first:
+      213: -7142452632685594315
+    second: ship_crash_sheet_11
+  - first:
+      213: 4333311882762253620
+    second: ship_crash_sheet_12
+  - first:
+      213: -5055822573321667464
+    second: ship_crash_sheet_13
+  - first:
+      213: -8947235937558831683
+    second: ship_crash_sheet_14
+  - first:
+      213: 5818740931784130599
+    second: ship_crash_sheet_15
+  - first:
+      213: -6530963715420297576
+    second: ship_crash_sheet_16
+  - first:
+      213: -1631444981503020640
+    second: ship_crash_sheet_17
+  - first:
+      213: 6550083708194134557
+    second: ship_crash_sheet_18
+  - first:
+      213: -2339048244347401601
+    second: ship_crash_sheet_19
+  - first:
+      213: 460233739542544040
+    second: ship_crash_sheet_20
+  - first:
+      213: -171340661908156098
+    second: ship_crash_sheet_21
+  - first:
+      213: 4795048811071251444
+    second: ship_crash_sheet_22
+  - first:
+      213: 5172161440245215432
+    second: ship_crash_sheet_23
+  - first:
+      213: -3405438441363025383
+    second: ship_crash_sheet_24
+  - first:
+      213: 4796240735834432607
+    second: ship_crash_sheet_25
+  - first:
+      213: -5925573811778036238
+    second: ship_crash_sheet_26
+  - first:
+      213: -1079038846554466703
+    second: ship_crash_sheet_27
+  - first:
+      213: -2482134858259851256
+    second: ship_crash_sheet_28
+  - first:
+      213: -4360158183359351888
+    second: ship_crash_sheet_29
+  - first:
+      213: 1201577451591801393
+    second: ship_crash_sheet_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ship_crash_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5394dc18cb1ca2d10800000000000000
+      internalID: 2101705191497484597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 184
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13148e6c8288f6fd0800000000000000
+      internalID: -2346507172119559887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 184
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc23f5c0522cf3260800000000000000
+      internalID: 7079590603626853067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 184
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279985a40ababf1d0800000000000000
+      internalID: -3315867995697800846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4539ed19daf351d50800000000000000
+      internalID: 6707337234747396948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 132
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae4bce732fd58f90800000000000000
+      internalID: -6951905106232389977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 129
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa0c1e4c2de915b0800000000000000
+      internalID: -5397021903882024206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 41
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9119d70b19fe621d0800000000000000
+      internalID: -3375747461657292519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 128
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720c4076c0250c050800000000000000
+      internalID: 5818740931784130599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 80
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89668657a1b5d55a0800000000000000
+      internalID: -6530963715420297576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 83
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a0c2bb3080a8fd0800000000000000
+      internalID: -2339048244347401601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 84
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31526763964f9df0800000000000000
+      internalID: -171340661908156098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 86
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8089ec05f7fad8dd0800000000000000
+      internalID: -2482134858259851256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_crash_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 41
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a9f34735cdca010800000000000000
+      internalID: 1201577451591801393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 05d80a248addf844ab633e34b6713c74
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ship_crash_sheet_0: 2101705191497484597
+      ship_crash_sheet_1: -2346507172119559887
+      ship_crash_sheet_10: -3568144444046236290
+      ship_crash_sheet_11: -7142452632685594315
+      ship_crash_sheet_12: 4333311882762253620
+      ship_crash_sheet_13: -5055822573321667464
+      ship_crash_sheet_14: -8947235937558831683
+      ship_crash_sheet_15: 5818740931784130599
+      ship_crash_sheet_16: -6530963715420297576
+      ship_crash_sheet_17: -1631444981503020640
+      ship_crash_sheet_18: 6550083708194134557
+      ship_crash_sheet_19: -2339048244347401601
+      ship_crash_sheet_2: 7079590603626853067
+      ship_crash_sheet_20: 460233739542544040
+      ship_crash_sheet_21: -171340661908156098
+      ship_crash_sheet_22: 4795048811071251444
+      ship_crash_sheet_23: 5172161440245215432
+      ship_crash_sheet_24: -3405438441363025383
+      ship_crash_sheet_25: 4796240735834432607
+      ship_crash_sheet_26: -5925573811778036238
+      ship_crash_sheet_27: -1079038846554466703
+      ship_crash_sheet_28: -2482134858259851256
+      ship_crash_sheet_29: -4360158183359351888
+      ship_crash_sheet_3: -3315867995697800846
+      ship_crash_sheet_30: 1201577451591801393
+      ship_crash_sheet_4: 6707337234747396948
+      ship_crash_sheet_5: -6951905106232389977
+      ship_crash_sheet_6: -5397021903882024206
+      ship_crash_sheet_7: -3375747461657292519
+      ship_crash_sheet_8: 5790417540625893403
+      ship_crash_sheet_9: -1141448179357510896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

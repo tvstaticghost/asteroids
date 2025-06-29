@@ -10,19 +10,20 @@ public class UIController : MonoBehaviour
     [SerializeField] Image lives1;
     [SerializeField] Image lives2;
     [SerializeField] Image lives3;
-    List<Image> iconList = new List<Image>();
+    [SerializeField] GameObject gameOverContainer;
+    public Player playerScript;
+    private List<Image> iconList = new List<Image>();
     private int playerLivesLeft = 3;
     private int score = 0;
 
     private void Start()
     {
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         iconList.Add(lives1);
         iconList.Add(lives2);
         iconList.Add(lives3);
 
         RenderScore();
-        PlayerHit();
-        PlayerHit();
         RenderLifeIcons();   
     }
 
@@ -45,12 +46,29 @@ public class UIController : MonoBehaviour
 
     public void PlayerHit()
     {
-        playerLivesLeft--;
+        if (playerLivesLeft >= 0)
+        {
+            playerLivesLeft--;
+        }
+        
+        if (playerLivesLeft == 0)
+        {
+            GameOver();
+        }
 
-        if (iconList.Count >= 0)
+        //Add GameOver function for lives hitting 0
+
+        if (iconList.Count > 0)
         {
             iconList.RemoveAt(playerLivesLeft);
+            RenderLifeIcons();
         }
+    }
+
+    private void GameOver()
+    {
+        gameOverContainer.SetActive(true);
+        playerScript.GameOver();
     }
 
     private void RenderScore()

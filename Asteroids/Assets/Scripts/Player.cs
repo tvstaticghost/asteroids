@@ -13,11 +13,21 @@ public class Player : MonoBehaviour
     private Vector3 moveDirection;
     private Vector2 mousePos;
     private bool canShoot = true;
+    private Collider2D playerCollider;
+    public UIController uiController;
 
     void Start()
     {
-        // Vector3 newAngle = new(0, 0, -90f);
-        // transform.eulerAngles = newAngle;
+        playerCollider = GetComponent<Collider2D>();
+        uiController = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Asteroid"))
+        {
+            uiController.PlayerHit();
+        }
     }
 
     private void FixedUpdate()
@@ -72,5 +82,10 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         canShoot = true;
+    }
+
+    public void GameOver()
+    {
+        gameObject.SetActive(false);
     }
 }

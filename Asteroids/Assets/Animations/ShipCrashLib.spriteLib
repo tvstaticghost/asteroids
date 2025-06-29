@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Crash
+    m_Hash: 371843035
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: ship_crash_sheet_0
+      m_Hash: 841461009
+      m_Sprite: {fileID: 2101705191497484597, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2101705191497484597, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_1
+      m_Hash: 86023559
+      m_Sprite: {fileID: -2346507172119559887, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2346507172119559887, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_2
+      m_Hash: 472501309
+      m_Sprite: {fileID: 7079590603626853067, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7079590603626853067, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_3
+      m_Hash: 724499627
+      m_Sprite: {fileID: -3315867995697800846, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3315867995697800846, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_4
+      m_Hash: 894069000
+      m_Sprite: {fileID: 6707337234747396948, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6707337234747396948, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_5
+      m_Hash: 38623646
+      m_Sprite: {fileID: -6951905106232389977, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6951905106232389977, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_6
+      m_Hash: 457443364
+      m_Sprite: {fileID: -5397021903882024206, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5397021903882024206, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_7
+      m_Hash: 742602930
+      m_Sprite: {fileID: -3375747461657292519, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3375747461657292519, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_15
+      m_Hash: 937958832
+      m_Sprite: {fileID: 5818740931784130599, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5818740931784130599, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_16
+      m_Hash: 786517002
+      m_Sprite: {fileID: -6530963715420297576, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6530963715420297576, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_19
+      m_Hash: 1046368667
+      m_Sprite: {fileID: -2339048244347401601, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2339048244347401601, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_21
+      m_Hash: 464030314
+      m_Sprite: {fileID: -171340661908156098, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -171340661908156098, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_28
+      m_Hash: 578040526
+      m_Sprite: {fileID: -2482134858259851256, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2482134858259851256, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    - m_Name: ship_crash_sheet_30
+      m_Hash: 901024701
+      m_Sprite: {fileID: 1201577451591801393, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1201577451591801393, guid: 86ba1cdfbc1606246959fe615b3ebc99, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 14
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638867430295471859
+  m_Version: 1
