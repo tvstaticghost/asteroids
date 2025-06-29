@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - SmallAsteroid
   - ObjectManager
+  - Asteroid
   layers:
   - Default
   - TransparentFX

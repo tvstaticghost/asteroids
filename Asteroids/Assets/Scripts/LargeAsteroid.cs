@@ -7,7 +7,6 @@ public class LargeAsteroid : AsteroidBase
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("Shot");
             AsteroidHit();
             Destroy(collision.gameObject);
         }
