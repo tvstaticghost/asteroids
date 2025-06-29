@@ -3,8 +3,11 @@ using UnityEngine;
 public class SmallAsteroid : AsteroidBase
 {
     private bool clockwise;
+    private int amountOfPoints = 70;
     private new void Start()
     {
+        uiController = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+
         if (clockwise)
         {
             SetDirection("clockwise");
@@ -25,13 +28,14 @@ public class SmallAsteroid : AsteroidBase
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            AsteroidShot();
             Destroy(collision.gameObject);
+            AsteroidShot();
         }
     }
 
     private void AsteroidShot()
     {
         Destroy(gameObject);
+        uiController.IncreaseScore(amountOfPoints);
     } 
 }

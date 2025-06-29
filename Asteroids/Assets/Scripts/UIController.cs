@@ -71,6 +71,14 @@ public class UIController : MonoBehaviour
         playerScript.GameOver();
     }
 
+    public void IncreaseScore(int points)
+    {
+        Debug.Log("Called");
+        score += points;
+        Debug.Log(score);
+        RenderScore();
+    }
+
     private void RenderScore()
     {
         ScoreValue.text = score.ToString();

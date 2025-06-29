@@ -6,10 +6,13 @@ public class AsteroidBase : MonoBehaviour
     protected Vector3 playerPos;
     protected ObjectManager objectManager;
     protected float movementSpeed = 2f;
+    protected UIController uiController;
+    protected bool hasBeenVisible = false;
 
     protected void Start()
     {
         objectManager = GameObject.FindGameObjectWithTag("ObjectManager").GetComponent<ObjectManager>();
+        uiController = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
         moveDirection = (playerPos - transform.position).normalized;
     }
@@ -41,5 +44,18 @@ public class AsteroidBase : MonoBehaviour
         );
 
         moveDirection = (Vector3)(rotatedDirection);
+    }
+
+    protected void OnBecameVisible()
+    {
+        hasBeenVisible = true;
+    }
+
+    protected void OnBecameInvisible()
+    {
+        if (hasBeenVisible)
+        {
+            Destroy(gameObject);
+        }
     }
 }

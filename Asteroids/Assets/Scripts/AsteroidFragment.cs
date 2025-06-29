@@ -3,9 +3,12 @@ using UnityEngine;
 public class AsteroidFragment : AsteroidBase
 {
     private bool clockwise;
+    private int amountOfPoints = 100;
 
     private new void Start()
     {
+        uiController = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+
         if (clockwise)
         {
             SetDirection("clockwise");
@@ -32,5 +35,6 @@ public class AsteroidFragment : AsteroidBase
     private void AsteroidShot()
     {
         Destroy(gameObject);
+        uiController.IncreaseScore(amountOfPoints);
     }
 }

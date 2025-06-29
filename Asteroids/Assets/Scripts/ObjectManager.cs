@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,7 +12,10 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] GameObject asteroidSmall2;
     [SerializeField] GameObject asteroidFragment;
     [SerializeField] GameObject explosion;
+    [SerializeField] GameObject crash;
+    [SerializeField] GameObject player;
     List<GameObject> asteroidOptions = new List<GameObject>();
+    public int playerLives = 3;
 
     private void Start()
     {
@@ -38,6 +42,25 @@ public class ObjectManager : MonoBehaviour
     public void CreateExplosion(Vector3 impactPos)
     {
         Instantiate(explosion, impactPos, Quaternion.identity);
+    }
+
+    public void CreateCrash(Vector3 crashPos, Quaternion crashRotation)
+    {
+        playerLives--;
+        Instantiate(crash, crashPos, crashRotation);
+        if (playerLives > 0)
+        {
+            StartCoroutine(SpawnPlayer(1.5f));
+        }
+    }
+
+    private IEnumerator SpawnPlayer(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        player.SetActive(true);
+        player.transform.position = Vector3.zero;
+        player.transform.rotation = Quaternion.identity;
+        player.GetComponent<Player>().PlayerReset();
     }
 
     private void SpawnSmallAsteroids(Vector3 impactPos, Vector3 moveDirection)

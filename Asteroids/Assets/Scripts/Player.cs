@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,9 +16,13 @@ public class Player : MonoBehaviour
     private bool canShoot = true;
     private Collider2D playerCollider;
     public UIController uiController;
+    public Crash crashScript;
+    public ObjectManager objectManager;
+    private Color originalColor;
 
     void Start()
     {
+        originalColor = gameObject.GetComponent<SpriteRenderer>().color;
         playerCollider = GetComponent<Collider2D>();
         uiController = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
     }
@@ -27,7 +32,33 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Asteroid"))
         {
             uiController.PlayerHit();
+            PlayerCrash();
         }
+    }
+
+    private void PlayerCrash()
+    {
+        Vector3 animationLocation = gameObject.transform.position;
+        Quaternion rotation = gameObject.transform.rotation;
+        gameObject.SetActive(false);
+        objectManager.CreateCrash(animationLocation, rotation);
+        //StartCoroutine(SpawnPlayer(1.3f));
+    }
+
+    public void PlayerReset()
+    {
+        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        Color fadedColor = Color.white;
+        fadedColor.a = 0.2f;
+        gameObject.GetComponent<SpriteRenderer>().color = fadedColor;
+        StartCoroutine(RestorePlayer(1f));
+    }
+
+    public IEnumerator RestorePlayer(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = originalColor;
     }
 
     private void FixedUpdate()
