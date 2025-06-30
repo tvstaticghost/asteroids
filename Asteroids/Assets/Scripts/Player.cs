@@ -40,14 +40,16 @@ public class Player : MonoBehaviour
     {
         Vector3 animationLocation = gameObject.transform.position;
         Quaternion rotation = gameObject.transform.rotation;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
         objectManager.CreateCrash(animationLocation, rotation);
+        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        canShoot = false;
         //StartCoroutine(SpawnPlayer(1.3f));
     }
 
     public void PlayerReset()
     {
-        gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+        //gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         Color fadedColor = Color.white;
         fadedColor.a = 0.2f;
         gameObject.GetComponent<SpriteRenderer>().color = fadedColor;
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         gameObject.GetComponent<PolygonCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().color = originalColor;
+        canShoot = true;
     }
 
     private void FixedUpdate()
@@ -117,6 +120,7 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
+        objectManager.StopSpawningAsteroids();
         gameObject.SetActive(false);
     }
 }

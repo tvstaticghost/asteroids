@@ -73,9 +73,7 @@ public class UIController : MonoBehaviour
 
     public void IncreaseScore(int points)
     {
-        Debug.Log("Called");
         score += points;
-        Debug.Log(score);
         RenderScore();
     }
 
