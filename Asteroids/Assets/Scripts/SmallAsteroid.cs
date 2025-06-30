@@ -29,6 +29,7 @@ public class SmallAsteroid : AsteroidBase
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);
+            uiController.IncreaseShotsHit();
             AsteroidShot();
         }
     }
