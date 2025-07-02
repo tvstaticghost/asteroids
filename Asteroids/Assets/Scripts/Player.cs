@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public Crash crashScript;
     public ObjectManager objectManager;
     private Color originalColor;
+    private int shotsFired;
+    private int shotsHit;
 
     void Start()
     {
@@ -104,10 +106,16 @@ public class Player : MonoBehaviour
             if (canShoot)
             {
                 Instantiate(bullet, bulletSpawn.transform.position, Quaternion.identity);
+                shotsFired++;
                 canShoot = false;
                 StartCoroutine(BulletTimer(0.2f));
             }
         }
+    }
+
+    public int GetShotsFired()
+    {
+        return shotsFired;
     }
 
     public Vector2 GetMousePos()

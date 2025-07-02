@@ -28,6 +28,7 @@ public class AsteroidFragment : AsteroidBase
         if (collision.gameObject.CompareTag("Bullet"))
         {
             AsteroidShot();
+            uiController.IncreaseShotsHit();
             Destroy(collision.gameObject);
         }
     }

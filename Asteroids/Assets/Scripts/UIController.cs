@@ -14,10 +14,12 @@ public class UIController : MonoBehaviour
     [SerializeField] Button retryButton;
     [SerializeField] Button quitGameButton;
     [SerializeField] GameObject newHighScoreText;
+    [SerializeField] TextMeshProUGUI accuracyValue;
     public Player playerScript;
     private List<Image> iconList = new List<Image>();
     private int playerLivesLeft = 3;
     private int score = 0;
+    private int shotsHit = 0;
     private int highestScore = 0;
 
     private void Start()
@@ -72,6 +74,14 @@ public class UIController : MonoBehaviour
     private void GameOver()
     {
         gameOverContainer.SetActive(true);
+        if (playerScript.GetShotsFired() == 0)
+        {
+            accuracyValue.text = "Accuracy: 0%";
+        }
+        else
+        {
+            accuracyValue.text = "Accuracy: " + ((float)shotsHit / playerScript.GetShotsFired() * 100f).ToString("F1") + "%";
+        }
         Debug.Log(score);
 
         if (score > highestScore)
@@ -121,5 +131,10 @@ public class UIController : MonoBehaviour
     private void RenderScore()
     {
         ScoreValue.text = score.ToString();
+    }
+
+    public void IncreaseShotsHit()
+    {
+        shotsHit++;
     }
 }
