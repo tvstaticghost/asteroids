@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject bulletSpawn;
     [SerializeField] GameObject bullet;
+    [SerializeField] Canvas canvasUI;
+    [SerializeField] GameObject downLifePrefab;
     private Vector3 moveDirection;
     private Vector2 mousePos;
     private bool canShoot = true;
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
         objectManager.CreateCrash(animationLocation, rotation);
         gameObject.GetComponent<PolygonCollider2D>().enabled = false;
         canShoot = false;
+        Instantiate(downLifePrefab, canvasUI.transform);
         //StartCoroutine(SpawnPlayer(1.3f));
     }
 
@@ -120,7 +123,28 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("Calling Game Over");
         objectManager.StopSpawningAsteroids();
         gameObject.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        //Set player object to active and reset player
+        resetPlayer();
+
+        //Start asteroids again using objectManager
+        objectManager.RestartGame();
+    }
+
+    private void resetPlayer()
+    {
+        gameObject.SetActive(true);
+        gameObject.transform.position = Vector3.zero;
+        gameObject.transform.rotation = Quaternion.identity;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<PolygonCollider2D>().enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().color = originalColor;
+        canShoot = true;
     }
 }

@@ -143,4 +143,22 @@ public class ObjectManager : MonoBehaviour
         Debug.Log("Stopping Asteroids");
         StopCoroutine(spawnCoroutine);
     }
+
+    public void RemoveAllAsteroids()
+    {
+        GameObject[] allAsteroids = GameObject.FindGameObjectsWithTag("Asteroid");
+        foreach (GameObject asteroid in allAsteroids)
+        {
+            Destroy(asteroid);
+        }
+    }
+
+    public void RestartGame()
+    {
+        playerLives = 3;
+        if (spawnCoroutine != null)
+            StopCoroutine(spawnCoroutine);
+        spawnCoroutine = StartCoroutine(SpawnAsteroidsRoutine());
+        RemoveAllAsteroids();
+    }
 }

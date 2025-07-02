@@ -11,10 +11,14 @@ public class UIController : MonoBehaviour
     [SerializeField] Image lives2;
     [SerializeField] Image lives3;
     [SerializeField] GameObject gameOverContainer;
+    [SerializeField] Button retryButton;
+    [SerializeField] Button quitGameButton;
+    [SerializeField] GameObject newHighScoreText;
     public Player playerScript;
     private List<Image> iconList = new List<Image>();
     private int playerLivesLeft = 3;
     private int score = 0;
+    private int highestScore = 0;
 
     private void Start()
     {
@@ -68,7 +72,44 @@ public class UIController : MonoBehaviour
     private void GameOver()
     {
         gameOverContainer.SetActive(true);
+        Debug.Log(score);
+
+        if (score > highestScore)
+        {
+            newHighScoreText.SetActive(true);
+            highestScore = score;
+            Debug.Log("New High Score!");
+        }
+
         playerScript.GameOver();
+    }
+
+    public void RetryGame()
+    {
+        newHighScoreText.SetActive(false);
+
+        //Reset score to 0
+        score = 0;
+        RenderScore();
+
+        //Add back the 3 life icons
+        playerLivesLeft = 3;
+        iconList.Add(lives1);
+        iconList.Add(lives2);
+        iconList.Add(lives3);
+        RenderLifeIcons();
+
+        //Disable the game over UI
+        gameOverContainer.SetActive(false);
+
+        //Call the Restart Game script to respawn the player
+        playerScript.RestartGame();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting");
     }
 
     public void IncreaseScore(int points)
