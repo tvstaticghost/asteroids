@@ -2098,15 +2098,12 @@ MonoBehaviour:
   lives2: {fileID: 1114091156}
   lives3: {fileID: 707764523}
   gameOverContainer: {fileID: 29147808}
-<<<<<<< HEAD
   retryButton: {fileID: 0}
   quitGameButton: {fileID: 0}
   newHighScoreText: {fileID: 716840237}
   playerScript: {fileID: 0}
-=======
   accuracyValue: {fileID: 839217770}
   playerScript: {fileID: 823264406}
->>>>>>> f274c45aaa6475c31b12d6b725f37dae108cbb4a
 --- !u!1 &1030812116
 GameObject:
   m_ObjectHideFlags: 0
